@@ -22,7 +22,7 @@ function SideNav() {
           <p className="text-xs text-[#706C75]">hello@cherry.com</p>
         </div>
       </div>
-      <div className="flex flex-col flex-1 gap-8 overflow-y-scroll">
+      <div className="flex flex-col flex-1 gap-8 overflow-y-auto ">
         <div className="flex flex-col gap-4">
           <h5 className="text-sm tracking-[6px]">MAIN</h5>
           <ul className="flex flex-col gap-1 ">
