@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 function ProjectCard({
   imageUrl,
@@ -10,8 +12,13 @@ function ProjectCard({
   label: string;
   description: string;
 }) {
+  const router = useRouter();
+  const handleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    router.push("/projects/1234");
+  };
   return (
-    <div className="flex flex-col  gap-4">
+    <div onClick={handleClick} className="flex flex-col  gap-4">
       <div className="min-w-[320px] min-h-[360px] relative">
         <Image
           src={imageUrl}
