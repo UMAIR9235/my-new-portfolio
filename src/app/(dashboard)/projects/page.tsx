@@ -1,5 +1,5 @@
 import ProjectCard from "@/components/project-card";
-import { ArrowUp, ChevronRight } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import React from "react";
 
 function ProjectsListPage() {

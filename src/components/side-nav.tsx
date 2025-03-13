@@ -2,6 +2,7 @@
 import {
   BriefcaseBusiness,
   Compass,
+  Menu,
   PenTool,
   Telescope,
   UserRound,
@@ -14,15 +15,19 @@ import { LuGithub } from "react-icons/lu";
 import { SiInstagram } from "react-icons/si";
 
 function SideNav() {
-  const [showNavLinks, setShowLinks] = useState(false);
+  const [showNavLinks, setShowNavLinks] = useState(false);
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 lg:flex lg:relative flex-col gap-8 p-6 bg-[#141414] lg:rounded-3xl min-w-[280px] shadow-2xl lg:shadow-none">
+    <nav className="fixed top-0 inset-x-0 z-50 flex lg:relative flex-col gap-8 p-6 bg-[#141414] lg:rounded-3xl min-w-[280px] shadow-2xl lg:shadow-none">
       <div className="flex items-center gap-4">
         <div className="w-12 h-12 rounded-full bg-indigo-300"></div>
         <div className="flex flex-col">
           <h4 className=" font-medium">Umair Khurshid</h4>
           <p className="text-xs text-[#706C75]">umairslm80@gmail.com</p>
         </div>
+        <Menu
+          className="text-white ml-auto lg:hidden"
+          onClick={() => setShowNavLinks(!showNavLinks)}
+        />
       </div>
       <div
         className={`flex flex-col flex-1 gap-8 overflow-y-auto ${

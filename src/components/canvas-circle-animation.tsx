@@ -143,7 +143,7 @@ const CanvasCircleAnimation: React.FC<CanvasCircleAnimationProps> = ({
         cancelAnimationFrame(animationFrameId.current);
       }
     };
-  }, [width, height]); // Re-run when dimensions change
+  }, [width, height, colors]); // Re-run when dimensions change
 
   return (
     <canvas
